@@ -1,0 +1,17 @@
+@mixin flex($justify, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin title($color) {
+  font-size: 24px;
+  font-weight: 700;
+  color: $color;
+}
+@mixin btn($color) {
+  padding: 8px 16px;
+  border: 1px solid $color;
+  color: $color;
+  background-color: transparent;
+}

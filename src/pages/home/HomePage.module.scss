@@ -1,0 +1,67 @@
+@import "../../sass/variables";
+@import "../../sass/utils";
+
+section {
+  width: 100%;
+  background-color: $white-color;
+  @include flex(flex-start, center);
+  flex-direction: column;
+  .topSec {
+    width: 100%;
+    height: 333px;
+    margin-bottom: 2rem;
+    background: linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.5)),
+      url("../../assets/mobile/mobile-head-img.png") no-repeat center
+        center/cover;
+    @include flex(flex-end, center);
+    flex-direction: column;
+    padding: 2rem;
+    @include title($white-color);
+    p {
+      margin-bottom: 25px;
+    }
+    button {
+      width: 150px;
+      @include btn($white-color);
+      font-size: $small-screen-font-size;
+    }
+  }
+
+  .productsCategory {
+    width: 90%;
+
+    h2 {
+      @include title($black-color);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .categories {
+      @include flex(center, center);
+      div {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        margin: 0px 10px;
+        img {
+          object-fit: cover;
+          height: 118px;
+          margin-bottom: 8px;
+        }
+        span {
+          font-size: $small-screen-font-size;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 600px) {
+  section {
+    .topSec {
+      height: 500px;
+      background: linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.5)),
+        url("../../assets/Desktop/Landing/unsplash_HvkDYluePqw.png") no-repeat
+          center center/cover;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+}
