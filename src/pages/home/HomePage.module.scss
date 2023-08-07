@@ -29,7 +29,8 @@ section {
 
   .productsCategory {
     width: 90%;
-
+    height: fit-content;
+    margin-bottom: 2rem;
     h2 {
       @include title($black-color);
       margin-bottom: 16px;
@@ -41,18 +42,86 @@ section {
         @include flex(flex-start, center);
         flex-direction: column;
         margin: 0px 10px;
-        img {
-          object-fit: cover;
+
+        width: 23%;
+        .imgBox {
           height: 118px;
+          width: 100%;
+
           margin-bottom: 8px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
         }
+
         span {
           font-size: $small-screen-font-size;
         }
       }
     }
   }
+
+  .analysis {
+    width: 100%;
+    height: auto;
+    background-color: $pale-pink;
+    padding: 0.5rem 0;
+    @include flex(flex-start, center);
+    flex-direction: column;
+    .text {
+      width: 100%;
+      flex-direction: column;
+      h1 {
+        display: none;
+      }
+      p {
+        padding: 0px 1rem;
+        font-size: $small-screen-font-size;
+        margin-bottom: 20px;
+      }
+      .btnBox {
+        width: 100%;
+        padding: 0px 0.5rem;
+
+        @include flex(space-between, center);
+        button {
+          width: 49%;
+          outline: none;
+          border: none;
+          padding: 8px 0px;
+          &:first-child {
+            color: $primary-color;
+          }
+          &:last-child {
+            color: $white-color;
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+    .imgBox {
+      width: 100%;
+      height: 300px;
+
+      position: relative;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      background: url("../../assets/mobile/Mobile/Landing/Frame\ 26085889.png")
+        no-repeat center center/cover;
+      &::before {
+        content: "Virtual Skincare Analysis";
+        @include title($black-color);
+        position: absolute;
+        top: calc(2.5rem / 1) * -1;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
 }
+
 @media only screen and (min-width: 600px) {
   section {
     .topSec {
@@ -61,7 +130,111 @@ section {
         url("../../assets/Desktop/Landing/unsplash_HvkDYluePqw.png") no-repeat
           center center/cover;
     }
+    .productsCategory {
+      .categories {
+        div {
+          width: 19%;
+        }
+      }
+    }
+    .analysis {
+      width: 90%;
+      background-color: $primary-color;
+      color: $white-color;
+      .text {
+        .btnBox {
+          button {
+            &:first-child {
+              color: #fff;
+              background-color: transparent;
+            }
+            &:last-child {
+              color: $primary-color;
+              background-color: $white-color;
+            }
+          }
+        }
+      }
+      .imgBox {
+        &::before {
+          color: $white-color;
+        }
+      }
+    }
   }
-}
-@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
+    section {
+      .productsCategory {
+        .categories {
+          div {
+            width: 15%;
+            .imgBox {
+              height: 180px;
+            }
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .analysis {
+        width: 90%;
+        min-height: 300px;
+
+        height: max-content;
+        @include flex(center, center);
+        flex-direction: row-reverse;
+        padding: 0;
+        background-color: $primary-color;
+        color: $white-color;
+        .text {
+          width: 50%;
+          height: max-content;
+          flex-direction: column;
+          padding: 0.5rem 1rem;
+          @include flex(flex-start, flex-start);
+          h1 {
+            display: inline-block;
+            margin-bottom: 15px;
+          }
+          p {
+            padding: 0;
+            font-weight: 400;
+            line-height: 180%; /* 25.2px */
+            text-transform: capitalize;
+            margin-bottom: 15px;
+          }
+          .largeScreenBtnBox {
+            @include flex(space-between, flex-end);
+            width: 100%;
+            margin-top: 5px;
+            div:first-child {
+              width: 70%;
+              h3 {
+                margin-bottom: 10px;
+              }
+              span {
+                display: block;
+                margin-bottom: 10px;
+              }
+              button {
+                @include btn($white-color);
+              }
+            }
+          }
+        }
+        .imgBox {
+          width: 50%;
+          min-height: fit-content;
+          height: 350px;
+          background: url("../../assets/Desktop/Landing/image\ 10.png")
+            no-repeat center center/cover;
+          margin: 0;
+          &::before {
+            content: "";
+          }
+        }
+      }
+    }
+  }
 }
