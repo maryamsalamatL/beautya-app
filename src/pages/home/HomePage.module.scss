@@ -3,6 +3,7 @@
 
 section {
   width: 100%;
+
   background-color: $white-color;
   @include flex(flex-start, center);
   flex-direction: column;
@@ -64,6 +65,14 @@ section {
   }
 
   .analysis {
+    &::before {
+      content: "Virtual Skincare Analysis";
+      @include title($black-color);
+
+      top: calc((2.5rem / 1) * -1);
+      text-align: center;
+      width: 100%;
+    }
     width: 100%;
     height: auto;
     background-color: $pale-pink;
@@ -105,19 +114,10 @@ section {
       width: 100%;
       height: 300px;
 
-      position: relative;
-      margin-top: 2.5rem;
+      margin-top: 0.5rem;
       margin-bottom: 1rem;
       background: url("../../assets/mobile/Mobile/Landing/Frame\ 26085889.png")
         no-repeat center center/cover;
-      &::before {
-        content: "Virtual Skincare Analysis";
-        @include title($black-color);
-        position: absolute;
-        top: calc(2.5rem / 1) * -1;
-        text-align: center;
-        width: 100%;
-      }
     }
   }
 }
@@ -138,6 +138,9 @@ section {
       }
     }
     .analysis {
+      &::before {
+        color: $white-color;
+      }
       width: 90%;
       background-color: $primary-color;
       color: $white-color;
@@ -153,11 +156,6 @@ section {
               background-color: $white-color;
             }
           }
-        }
-      }
-      .imgBox {
-        &::before {
-          color: $white-color;
         }
       }
     }
@@ -178,6 +176,10 @@ section {
         }
       }
       .analysis {
+        &::before {
+          content: "";
+          width: 0%;
+        }
         width: 90%;
         min-height: 300px;
 
@@ -230,9 +232,6 @@ section {
           background: url("../../assets/Desktop/Landing/image\ 10.png")
             no-repeat center center/cover;
           margin: 0;
-          &::before {
-            content: "";
-          }
         }
       }
     }

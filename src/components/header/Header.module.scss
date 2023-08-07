@@ -3,12 +3,13 @@
 header {
   width: 100%;
   height: 64px;
-  position: relative;
+  position: fixed;
+  border-bottom: 1px solid #dfdfdf6a;
   color: $black-color;
   background-color: $white-color;
-  @include flex(center, flex-end);
+  @include flex(center, center);
   padding: 0.8rem;
-  background: radial-gradient(#f4cfe1ba, $white-color);
+  background: radial-gradient(#f8e9f0, $white-color);
   div {
     @include flex(center, center);
     font-size: $small-screen-icon-size;
@@ -18,12 +19,27 @@ header {
 
     ul {
       width: 100%;
-      position: absolute;
-      bottom: -100px;
-      right: 0;
-
+      height: 100vh;
+      background-color: #faf9f5;
+      z-index: 2000;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      padding: 1.5rem;
       @include flex(flex-start, flex-start);
       flex-direction: column;
+      li {
+        background-color: $white-color;
+        width: 100%;
+        height: 40px;
+        font-size: $small-screen-font-size;
+        padding: 10px;
+        font-weight: 600;
+        border-bottom: 1px solid $natural-gray-light;
+        &:first-child {
+          border-top: 1px solid $natural-gray-light;
+        }
+      }
     }
   }
   .search {
@@ -44,18 +60,32 @@ header {
 @media only screen and (min-width: 768px) {
   header {
     .list {
-      width: 65%;
+      width: 70%;
       order: 2;
       position: relative;
+
       &Icon {
         display: none;
       }
       ul {
-        width: 100%;
-        bottom: 0%;
-        right: 0%;
+        width: 68%;
+        height: 64px;
+
+        top: 0px;
+        left: 16%;
         flex-direction: row;
-        // @include flex(space-between);
+        padding: 0;
+        background-color: transparent;
+        @include flex(flex-start, center);
+        li {
+          border: none;
+          background-color: transparent;
+          padding: 5px;
+
+          &:first-child {
+            border-top: none;
+          }
+        }
       }
     }
     .search {
@@ -63,7 +93,7 @@ header {
       order: 3;
     }
     .logo {
-      width: 20%;
+      width: 15%;
       order: 1;
     }
     .language {
