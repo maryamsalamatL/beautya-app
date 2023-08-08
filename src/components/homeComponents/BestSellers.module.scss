@@ -1,0 +1,11 @@
+@import "../../sass/utils";
+@import "../../sass/variables";
+.container {
+  width: 100%;
+  text-align: center;
+  padding-top: 2rem;
+  background-color: $natural-background-color;
+  h1 {
+    @include title($black-color);
+  }
+}

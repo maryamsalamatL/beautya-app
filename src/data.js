@@ -46,7 +46,7 @@ const products = [
   {
     id: 1,
     src: product1,
-    tags: [],
+    tags: ["best-sell"],
     title: "Beautya  La Mousse Off/On Foaming Cleaner",
     description:
       "Anti-Pollution Foaming Cleanser with Purifying French Water Lily",
@@ -57,7 +57,7 @@ const products = [
   {
     id: 2,
     src: product2,
-    tags: [],
+    tags: ["best-sell"],
     title: "Beautya Prestige la Mousse Micellaire",
     description: "Anti-Aging Face Serum, with Purifying French Water Lily",
     price: "$520.00",
@@ -67,7 +67,7 @@ const products = [
   {
     id: 3,
     src: product3,
-    tags: [],
+    tags: [""],
     title: "Beautya Prestige la Mousse Micellaire",
     description: "Anti-Aging Face Serum, with Purifying French Water Lily",
     price: "$520.00",
@@ -77,7 +77,7 @@ const products = [
   {
     id: 4,
     src: product4,
-    tags: [],
+    tags: ["best-sell"],
     title: "Beautya Prestige la Mousse Micellaire",
     description: "Anti-Aging Face Serum, with Purifying French Water Lily",
     price: "$520.00",
@@ -87,7 +87,7 @@ const products = [
   {
     id: 5,
     src: product5,
-    tags: [],
+    tags: [""],
     title: "Beautya Prestige la Mousse Micellaire",
     description: "Anti-Aging Face Serum, with Purifying French Water Lily",
     price: "$320.00",
@@ -97,7 +97,7 @@ const products = [
   {
     id: 6,
     src: product6,
-    tags: [],
+    tags: [""],
     title: "Beautya Prestige la Mousse Micellaire",
     description: "Anti-Aging Face Serum, with Purifying French Water Lily",
     price: "$65.00",
@@ -107,7 +107,7 @@ const products = [
   {
     id: 7,
     src: product7,
-    tags: [],
+    tags: [""],
     title: "Beautya Prestige la Mousse Micellaire",
     description: "Anti-Aging Face Serum, with Purifying French Water Lily",
     price: "$700.00",
@@ -117,7 +117,7 @@ const products = [
   {
     id: 8,
     src: product8,
-    tags: [],
+    tags: ["best-sell"],
     title: "Beautya Prestige la Mousse Micellaire",
     description:
       "Anti-Pollution Foaming Cleanser with Purifying French Water Lily",
@@ -128,7 +128,7 @@ const products = [
   {
     id: 9,
     src: product9,
-    tags: [],
+    tags: ["best-sell"],
     title: "Beautya  La Mousse Off/On Foaming Cleaner",
     description:
       "Anti-Pollution Foaming Cleanser with Purifying French Water Lily",
@@ -139,7 +139,7 @@ const products = [
   {
     id: 10,
     src: product10,
-    tags: [],
+    tags: [""],
     title: "Beautya Prestige la Mousse Micellaire",
     description: "Anti-Aging Face Serum, with Purifying French Water Lily",
     price: "$75.00",
@@ -150,7 +150,7 @@ const products = [
   {
     id: 11,
     src: product11,
-    tags: [],
+    tags: ["best-sell"],
     title: "Beautya  La Mousse Off/On Foaming Cleaner",
     description:
       "Anti-Pollution Foaming Cleanser with Purifying French Water Lily",
@@ -159,3 +159,4 @@ const products = [
     ...generalDetails,
   },
 ];
+export default products;
