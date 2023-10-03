@@ -1,0 +1,41 @@
+@import "../sass/utils";
+@import "../sass/variables";
+
+.product {
+  width: 150px;
+  height: 380px;
+  margin: 0px 20px;
+
+  background-color: $white-color;
+  border: 1px solid $natural-gray-light;
+  @include flex(flex-start, center);
+  flex-direction: column;
+  div:first-child {
+    width: 100%;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  div:last-child {
+    height: 100%;
+    padding: 8px;
+    @include flex(space-between, flex-start);
+    flex-direction: column;
+    h4 {
+      font-size: $small-screen-font-size;
+      color: $primary-text-color;
+      font-weight: 600;
+    }
+    p {
+      font-size: 12px;
+    }
+    span {
+      font-size: $small-screen-font-size;
+      font-weight: 600;
+    }
+  }
+}

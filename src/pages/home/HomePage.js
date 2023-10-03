@@ -5,12 +5,14 @@ import giftsImg from "../../assets/mobile/Landing/gifts image.png";
 import analysisImg from "../../assets/mobile/Mobile/Landing/Frame 26085889.png";
 import { isMobile, isTablet } from "react-device-detect";
 import QRcode from "../../assets/Desktop/Desktop/Landing/image 83.png";
+import BestSellers from "../../components/homeComponents/BestSellers";
 const HomePage = () => {
   return (
     <section>
       <TopSec />
       <ProductsCategory />
       <SkinCareAnalysis />
+      <BestSellers />
     </section>
   );
 };
